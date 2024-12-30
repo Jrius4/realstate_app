@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native'
+import {ImageSourcePropType, StyleSheet, Text, View} from 'react-native'
 import React, {createContext, ReactNode,useContext} from 'react'
 import {useAppwrite} from "@/lib/useAppwrite";
 import {getCurrentUser} from "@/lib/appwrite";
