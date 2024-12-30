@@ -85,12 +85,16 @@ export async function getAgents(){
         return [];
     }
 }
-export async function getProperty(id:string){
+export async function getPropertyById({ id }: { id: string }) {
     try {
-        const response = await databases.getDocument(config.databaseId!,config.propertiesCollectionId!,id);
-        return response;
-    }catch (e) {
-        console.error(e);
+        const result = await databases.getDocument(
+            config.databaseId!,
+            config.propertiesCollectionId!,
+            id
+        );
+        return result;
+    } catch (error) {
+        console.error(error);
         return null;
     }
 }
